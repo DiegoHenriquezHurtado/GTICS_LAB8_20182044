@@ -13,7 +13,7 @@ import java.util.List;
 public class PeliculasDao {
     public List<Peliculas> listarPeliculas(){
         RestTemplate restTemplate = new RestTemplateBuilder()
-                .basicAuthentication("L.rengifo@pucp.edu.pe","e88e146c70d821fcc6370975b5fe34bc")
+                .basicAuthentication("e88e146c70d821fcc6370975b5fe34bc","eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlODhlMTQ2YzcwZDgyMWZjYzYzNzA5NzViNWZlMzRiYyIsInN1YiI6IjY2NjkwMjc4MTcwMGEwMGFhNTFkZGFkOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.1UdT-TDzIUQD4E7n0ED8O9C4YDI68Flm1QNCmq5_-JM")
                 .build();
         ResponseEntity<Peliculas[]> response = restTemplate.getForEntity("https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1",Peliculas[].class);
 
